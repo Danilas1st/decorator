@@ -1,0 +1,51 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.category-main 
+		.section_in
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Униформа
+					li 
+						p Фартуки с грудкой
+			.category-main_main
+				.category-main_head 
+					h1 ФАРТУКИ С ГРУДКОЙ
+				.category-main_list 
+					ul 
+						-for(i = 0; i < 16; i++) 
+							li 
+								.popular_slide_img
+									img(src="i/popular/popular1.png", alt="")
+								.popular_price 
+									span 3500 ₽
+								.popular_txt 
+									p Фартук женский с грудкой “Грация”  
+								.popular_btn 
+									a(href="#") В корзину
+			.category_pagination
+				+pagination({
+					pages:9,
+					arrows:true
+				})
+	section.seo 
+		.section_in 
+			.seo_main 
+				.seo_head 
+					h2 ЗАГОЛОВОК ДЛЯ CEO ТЕКСТА
+				.seo_info.showMoreBlock
+					.seo_txt.showMoreTxt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.seo_btn_more.showMoreBtn
+						p Показать больше
+						img(src="i/arrowbottomtxt.png", alt="")

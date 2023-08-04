@@ -1,0 +1,76 @@
+// Global 
+$header: 16.5rem;
+$footer: 43.3rem;
+
+// Mobile
+$header_mob: 6rem;
+$footer_mob: 10rem;
+
+//---------------------------------------------fonts
+$font_path: "../fonts/";
+$font_1: 'FoglightenNo06', sans-serif;
+$font_2: 'Geologica-ExtraLight', sans-serif;
+$font_3: 'Geologica-Light', sans-serif;
+$font_4: 'Geologica-Medium', sans-serif;
+$font_5: 'Geologica-Regular', sans-serif;
+$font_6: 'Geologica-Thin', sans-serif;
+
+$font_size_base: 1.8rem;
+//---------------------------------------------fonts###
+
+//---------------------------------------------colors
+$white: rgba(255, 255, 255, 1);
+$black: 000;
+$dark: rgba(47, 47, 47, 1);
+$gold: rgba(237, 197, 103, 1) rgba(191, 149, 41, 1);
+$lightgreen: rgba(51, 184, 176, 1);
+$green: rgba(0, 166, 156, 1);
+$darkgreen: rgba(9, 142, 134, 1);
+$trans: transparent;
+
+
+
+$color_text_base: $black;
+$color_link_base: $black;
+$body_bg: $white;
+//---------------------------------------------colors###
+
+//---------------------------------------------z-index
+$z-index: (
+	popup : 101,
+	header : 100,
+	footer : 100,
+	el: -1,
+
+);
+//---------------------------------------------z-index###
+
+//---------------------------------------------layout
+$page_width: 132rem;
+
+//---------------------------------------------layout###
+
+//---------------------------------------------global values
+$gl_radius: 2.4rem;
+//---------------------------------------------global values###
+
+//---------------------------------------------media points
+$point_1: 1200px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 640px;
+$point_6: 480px;
+$point_7: 375px;
+$point_8: 320px;
+//---------------------------------------------media points
+
+//---------------------------------------------forms
+
+$input_font_size: $font_size_base;
+$input_border_color: #ccc;
+$input_border_color_active: $dark;
+$input_placeholder_color: rgba($dark, .5);
+$input_text_color: $dark;
+
+//---------------------------------------------forms###

@@ -1,0 +1,25 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.download
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						p Скачать каталог PDF
+			.download_main 
+				.download_head 
+					h1 СКАЧАТЬ КАТАЛОГ PDF
+				.download_fails 
+					ul 
+						-for(i = 0; i < 4; i++)
+							li 
+								.download_fails_name 
+									p Текстиль для ресторанов
+								.download_btn 
+									img(src="i/download.png", alt="")
+									a(href="#" download="") Скачать PDF

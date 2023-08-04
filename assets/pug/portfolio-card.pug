@@ -1,0 +1,27 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.portfolio-card 
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Портфолио
+					li 
+						p Частный заказчик
+			.portfolio-card_main
+				.portfolio-card_head 
+					h1 ЧАСТНЫЙ ЗАКАЗЧИК
+					.portfolio-card_addres
+						p Темрюк, Краснодарский край
+				.portfolio-card_info 
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				.portfolio-card_gallery 
+					ul
+						-for(i = 0; i < 7; i++)
+							li 
+								img(src="i/portfolio-card/image1.png", alt="")

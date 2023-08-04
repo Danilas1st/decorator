@@ -1,0 +1,43 @@
+header.header 
+	.section_in 
+		.header_main
+			.header_top 
+				.header_logo 
+					a(href="#") 
+						img(src="i/logo.png", alt="")
+				.header_info
+					.info_mobil 
+						a(href="#") 8 (800) 250 63 88
+					.info_schedule
+						p По будням с 9:00 до 17:00
+				.header_mail 
+					a(href="#") 2490249@list.ru
+				.header_addres 
+					p г. Краснодар, ул. Троицкая, 137, офис 6
+				.headder_search 
+					form.search
+						input(type="text" placeholder="Поиск по товарам")
+						button(type="search") 
+							+icon('search')
+				.header_cart_w 
+					a(href="#") 
+						.header_cart_img 
+							+icon('cart') 
+						.header_cart_info 
+							p Корзина
+							span пуста
+			.header_bottom 
+				.header_menu
+					nav.header_nav.link-hover
+						ul
+							li
+								img(src="i/indicator.png", alt="") 
+								a(href="#") Каталог
+							li 
+								a(href="#") Портфолио
+							li 
+								a(href="#") Доставка и оплата
+							li 
+								a(href="#") Скачать каталог 
+							li 
+								a(href="#") Контакты

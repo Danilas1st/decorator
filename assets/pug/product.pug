@@ -1,0 +1,111 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.product
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Униформа
+					li 
+						a(href="#") Фартуки с грудкой
+					li 
+						p Фартук женский с грудкой “Грация”
+			.product_main 
+				.product_gallery 
+					.product_slider--w 
+						.product_slider.swiper 
+							.swiper-wrapper 
+								-for(i = 0; i < 10; i++)
+									.swiper-slide
+										.product-slide  
+											.swiper_img
+												img(src="i/gallery.png", alt="")
+						.product_slider_nav 
+							.product_slider_btn_prewios 
+								button(type="button")
+									+icon('prev')
+							.product_slider_btn_next 
+								button(type="button")
+									+icon('next')
+						.product-thumb 
+							.product_sliderThumb.swiper 
+								.swiper-wrapper 
+									-for(i = 0; i < 10; i++)
+										.swiper-slide 
+											.thumb_img 
+												img(src="i/gallery.png", alt="")
+				.product_info 
+					.product_name 
+						h1 ЖЕНСКИЙ ФАРТУК С ГРУДКОЙ “ГРАЦИЯ”
+					.product_chrasteristics_w
+						.product_chrasteristics
+							.chrasteristics_list 
+								ul 
+									li 
+										p Артикул
+										.item_dots
+										span Фг-40
+									li 
+										p Размер
+										.item_dots
+										span 42-62
+									li 
+										p Вес
+										.item_dots
+										span 0.300 kg
+									li 
+										p Габариты упаковки
+										.item_dots
+										span 20 × 30 × 3 cm
+									li 
+										p Материал
+										.item_dots
+										span 50%СО, 50%РЕ, 220гр/м2
+						.product_chrasteristics_price
+							p 3500 ₽
+						.product_chrasteristics_btn 
+							.product_btn_left
+								a(href="#") Добавить в корзину
+							.product_btn_right 
+								.product_qantity
+									button(type="button" onclick="changeQuantity(-1)")
+										+icon('minus')
+									input(type="number" min="1" value="1" class="product_quantity")
+									button(type="button" onclick="changeQuantity(1)")
+										+icon('plus')
+			.product_informationthumb_img
+				.product_info_head 
+					h4 ОПИСАНИЕ
+				.product_info_txt 
+					p Уникальный изысканый фартук полуприлегающего силуэта. Выполнен из профессиональной смесовой ткани с водооталкивающей пропиткой. Чрезвычайно лёгок в уходе и прост в использовании: жидкости будут скатываться с его поверхности, а пятна легко удалятся влажной салфеткой. Украшен вышивкой из шелковой нити по низу полотнища. Имеет шейную лямку и пояса контрастного цвета в тон вышивки.
+			.product_main_similar.p2
+				.popular_head 
+					h2 ПОХОЖИЕ ТОВАРЫ
+					.popular_slider_nav 
+						.popular_slider_btn_previos 
+							button(type="button")
+								+icon('prev')
+						.popular_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.popular_slider_w
+					.popular_slider.swiperPop  
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++)
+								.swiper-slide 
+									.popular_slide_img
+										img(src="i/popular/popular1.png", alt="")
+									.popular_price 
+										span 3500 ₽
+									.popular_txt 
+										p Фартук женский с грудкой “Грация”  
+									.popular_btn 
+										a(href="#") В корзину
+
+
+			

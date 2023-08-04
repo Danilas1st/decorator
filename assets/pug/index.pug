@@ -1,0 +1,199 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.hero_main
+			.hero_gallery 
+				.hero_slider--w 
+					.hero_slider.swiper 
+						.swiper-wrapper 
+							-for(i = 0; i < 3; i++)
+								.swiper-slide
+									.hero-slide 
+										.section_inner 	 
+											.hero_head
+												h1 ТЕКСТИЛЬ И УНИФОРМА<br>ДЛЯ РЕСТОРАННОГО БИЗНЕСА
+											.hero_txt 
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											.hero_btn 
+												a(href="#") Перейти в каталог
+													img(src="i/arrowright.png", alt="") 
+										.swiper_img
+											img(src="i/hero.png", alt="")
+					.hero_slider_nav 
+						.hero_slider_btn_prewios 
+							button(type="button")
+								+icon('prev')
+						.hero_slider_btn_next 
+							button(type="button")
+								+icon('next')
+					.hero-thumb 
+						.section_in 
+							.hero_sliderThumb.swiper 
+								.swiper-wrapper 
+									-for(i = 0; i < 3; i++)
+										.swiper-slide 
+											.thumb_num 
+												p 01
+	section.category 
+		.section_in 
+			.category_main 
+				.category_head 
+					h2 КАТЕГОРИИ ТОВАРОВ
+				.category_link 
+					ul 
+						-for(i = 0; i < 6; i++)
+							li 
+								a(href="#")
+									img(src="i/category/category2.png", alt="") 
+									p Ресторанный текстиль
+	section.popular 
+		.section_in
+			.popular_main.p2
+				.popular_head 
+					h2 ПОПУЛЯРНЫЕ ТОВАРЫ
+					.popular_slider_nav 
+						.popular_slider_btn_previos 
+							button(type="button")
+								+icon('prev')
+						.popular_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.popular_slider_w
+					.popular_slider.swiperPop  
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++)
+								.swiper-slide 
+									.popular_slide_img
+										img(src="i/popular/popular1.png", alt="")
+									.popular_price 
+										span 3500 ₽
+									.popular_txt 
+										p Фартук женский с грудкой “Грация”  
+									.popular_btn 
+										a(href="#") В корзину
+	section.link 
+		.section_in 
+			.link_main 
+				.link_img 
+					img(src="i/quotes.png", alt="")
+				.link_head 
+					h2 МЫ ОДЕВАЕМ ЛЮДЕЙ, ОКНА И МЕБЕЛЬ
+				.link_btn 
+					a(href="#") Перейти в каталог
+						img(src="i/arrowright.png", alt="")
+	section.why 
+		.section_in 
+			.why_main.p2
+				.why_head 
+					h2 ПОЧЕМУ НАС ВЫБИРАЮТ
+				.why_info 
+					ul 
+						li 
+							.why_txt 
+								h5 ЭКОНОМИЯ
+								P Размещая заказ у нас, Вы приобретаете текстиль от Производителя по первым ценам с возможностью выбора продукции под свой бюджет и вкус.
+						li 
+							.why_txt 
+								h5 ГИБКОСТЬ
+								P По Вашему запросу возможен индивидуальный подбор материалов и условий сотрудничества.
+								p Мы – профессионалы и несём ответственность за результат.
+						li 
+							.why_txt 
+								h5 СЕРТИФИКАЦИЯ
+								P Все материалы, используемые в производстве, имеют сертификаты и декларации о соответствии.
+						li 
+							.why_txt 
+								h5 ОПЕРАТИВНОСТЬ
+								P Исполнение заказов в среднем 7-10 дней. Возможно срочное изготовление от 1-го дня.
+								p Поддерживаемый запас товара на складе позволяет отгрузить Ваш заказ в день оплаты.
+	section.img 
+		img(src="i/line.png", alt="")
+	section.about 
+		.section_in 
+			.about_main.p2
+				.about_col_left 
+					.about_head 
+						h2 О КОМПАНИИ 
+					.about_info 
+						p DECORATOR – команда профессионалов в решении текстильного вопроса. Собственное производство в г. Краснодар позволяет в разумные сроки и на высоком уровне реализовать проекты любой сложности для служб сервиса и сегмента HoReCa.
+						p Опыт работы с 2008г. способствует решению практически любых Ваших задач:
+						ul
+							li 
+								p изготовление текстиля в срочном порядке от 1-го дня;
+							li 
+								p подбор цветов, фактур и дизайна материалов;
+							li 
+								p производство продукции от эконома до премиум-качества;
+							li 
+								p комплексное текстильное решение в едином стиле – от занавески до бабочки;
+							li 
+								p выезд специалистов (Дизайнер, Замерщик) на Ваш объект;
+							li 
+								p оперативная доставка по всей России.
+						p ОДЕВАЕМ ЛЮДЕЙ, ОКНА И МЕБЕЛЬ!
+				.about_col_right 
+					img(src="i/about.png", alt="")
+	section.production
+		.section_in 
+			.production_main 
+				.production_top
+					.production_head 
+						h2 ТЕКСТИЛЬНОЕ ПРОИЗВОДСТВО
+					.production_info 
+						p Каждое изделие производится на промышленном оборудовании опытными специалистами – профессионалами своего дела. Наши мощности и опыт позволяют оперативно с высоким уровнем качества реализовать проекты любой сложности.
+						p Чёткие алгоритмы взаимодействия внутри производства и собственный склад материалов помогают исполнять срочные заказы и поддерживать товарный запас готовой продукции для быстрых отгрузок в день оплаты.
+						p В шоу-руме Вас встретит грамотный консультант, предоставит возможность ознакомиться и определиться с выбором из большого ассортимента униформы для служб сервиса, чехлов, сумок или столового белья либо поможет подобрать дизайн, фактуру, цвет ткани и фурнитуры для индивидуального заказа.
+				.production_bottom 
+					.production_video_left
+						a(href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video") 
+							img(src="i/videobg.png", alt="")
+							button(type="button")
+								img(src="i/play.png", alt="")
+					.production_video_right
+						a(href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video") 
+							img(src="i/videobg1.png", alt="")
+							button(type="button")
+								img(src="i/play.png", alt="")
+	section.certificate 
+		.section_in 
+			.certificate_main.p2
+				.certificate_head 
+					h2 СЕРТИФИКАТЫ
+					.certificate_slider_nav 
+						.certificate_slider_btn_previos 
+							button(type="button")
+								+icon('prev')
+						.certificate_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.certificate_slider_w
+					.certificate_slider.swiperCer
+						.swiper-wrapper
+							-for(i = 0; i < 7; i++)
+								.swiper-slide 
+									.certificate_slide_img
+										img(src="i/certificate/certificate.png", alt="")
+	section.seo 
+		.section_in 
+			.seo_main 
+				.seo_head 
+					h2 ЗАГОЛОВОК ДЛЯ CEO ТЕКСТА
+				.seo_info.showMoreBlock
+					.seo_txt.showMoreTxt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.seo_btn_more.showMoreBtn
+						p Показать больше
+						img(src="i/arrowbottomtxt.png", alt="")
+
+
+
+
+

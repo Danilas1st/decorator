@@ -1,0 +1,61 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.delivery
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						p Доставка и оплата
+			.delivery_main 
+				.delivery_head 
+					h1 ДОСТАВКА И ОПЛАТА 
+				.delivery_pay 
+					h2 ОПЛАТА 
+					h6 Оплата производится любым удобным Вам способом:
+					ul 
+						li 
+							p на расчётный счёт по реквизитам выставленного счёта (с НДС или без);
+						li 
+							p наличными в кассе шоу-рума;
+						li 
+							p перечислением на карты Сбербанк, Тинькофф, Альфа-Банк;
+						li 
+							p на сайте после оформления заказа.
+				.delivery_receiving
+					h2 ДОСТАВКА И ПОЛУЧЕНИЕ 
+					h6 Доставка по г. Краснодар:
+					ul
+						li 
+							p Доставка транспортном компании от 300 ₽;
+						li 
+							p Доставка курьером по тарифам такси;
+						li 
+							p Самовывоз.
+				.delivery_attention
+					p ! ОТГРУЗКА ТОВАРА СО СКЛАДА ОСУЩЕСТВЛЯЕТСЯ ПОСЛЕ 100% ОПЛАТЫ
+				.delivery_region 
+					h6 Доставка по регионам России:
+					ul 
+						li 
+							p Стоимость услуг согласно тарифам транспортных компаний;
+						li 
+							p До терминалов «СДЭК», «Деловые Линии» и «ПЭК» безоплатная доставка транспортом нашей компании.
+				.delivery_img 
+					ul 
+						li 
+							img(src="i/delivery/delivery.png", alt="")
+						li 
+							img(src="i/delivery/delivery1.png", alt="")
+						li 
+							img(src="i/delivery/delivery2.png", alt="")
+				.delivery_variation 
+					p ДРУГИЕ ВАРИАНТЫ ДОСТАВКИ ОГОВАРИВАЮТСЯ ИНДИВИДУАЛЬНО
+
+
+
+					
