@@ -24,8 +24,6 @@
 	height: 100%;
 	background: rgba(2, 6, 23, 0.45);
 }
-.close_popups {
-}
 .remove {
 }
 .popup_form_w {
@@ -50,8 +48,7 @@
 	text-align: center;
 	margin-bottom: 3rem;
 }
-.popup_form {
-}
+
 .popup-custom {
 	input {
 		width: 43.4rem!important;
@@ -61,12 +58,6 @@
 		margin-bottom: 3rem;
 	}
 } 
-.placing_form_input {
-}
-.popup-custom {
-}
-.placing_form_textarea {
-}
 .placing_form_info {
 	margin-bottom: 3rem;
 	p {
@@ -102,4 +93,64 @@
 		color:rgba(47, 47, 47, 0.70);
 		border-bottom: .1rem solid rgba(47, 47, 47, 0.70);
 	}
+}
+
+
+
+
+
+.popup {
+}
+.popup_menu {
+	position: fixed;
+	top: $header;
+	display: block;
+	left: 65%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	transition: all .2s ease;
+	opacity: 0;
+	visibility: hidden;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.popup_form_bg_m {
+}
+.close_popups {
+}
+.remove {
+}
+.popup_form_m {
+	width: 132rem;
+	height: 65.1rem;
+	background: $white;
+	padding: 3.5rem 0 3.5rem 3.5rem;
+}
+.popup_close_m {
+}
+.icon {
+}
+.icon-close {
+}
+.first_menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+	grid-gap: 7rem 0;
+}
+.popup_menu_category-top {
+	display: flex;
+}
+.popup_menu_category-img {
+	width: 5rem;
+	height: 5rem;
+	margin-right: 2rem;
+}
+.popup_menu_category-bottom {
+	margin-left: 7rem;
+}
+.sub-category {
 }

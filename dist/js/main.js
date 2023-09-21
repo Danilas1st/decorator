@@ -383,47 +383,6 @@ function productSlide() {
 }
 
 
-function changeQuantity(change) {
-	var quantityInput = document.querySelector('.product_quantity');
-	var currentQuantity = parseInt(quantityInput.value);
-
-
-	if (!isNaN(currentQuantity)) {
-		
-		var newQuantity = currentQuantity + change;
-
-		
-		if (newQuantity >= 1) {
-			quantityInput.value = newQuantity;
-		}
-	}
-}
-
-
-function jui() {
-	const mnogoHui = document.querySelectorAll('input[name="deliveryCheck"]')
-	const BistreE = document.querySelector('.palcing_main_addres')
-
-
-	mnogoHui.forEach(item => {		
-		item.addEventListener('change', () => {
-			const huiJUI = item.getAttribute('id')
-
-			if(huiJUI === 'box') {
-				console.log(huiJUI, 'PIDARMOT')
-				BistreE.style.display = "none"
-			} else {
-				BistreE.style.display = "block"
-
-			}
-		})
-	});
-}
-
-jui();
-
-
-
 function modal() {
 	let popup = document.querySelectorAll('.popup')
 	let btnArray = document.querySelectorAll('.trigger')
@@ -464,3 +423,50 @@ function isRemove(popup) {
 	popup.classList.remove('active')
 	document.body.classList.remove('fixed')
 }
+
+modal();
+
+
+
+function changeQuantity(change) {
+	var quantityInput = document.querySelector('.product_quantity');
+	
+	if (quantityInput) {
+			var currentQuantity = parseInt(quantityInput.value);
+
+			if (!isNaN(currentQuantity)) {
+					var newQuantity = currentQuantity + change;
+
+					if (newQuantity >= 1) {
+							quantityInput.value = newQuantity;
+					}
+			}
+	}
+}
+
+
+
+function jui() {
+	const mnogoHui = document.querySelectorAll('input[name="deliveryCheck"]')
+	const BistreE = document.querySelector('.palcing_main_addres')
+
+
+	mnogoHui.forEach(item => {		
+		item.addEventListener('change', () => {
+			const huiJUI = item.getAttribute('id')
+
+			if(huiJUI === 'box') {
+				console.log(huiJUI, 'PIDARMOT')
+				BistreE.style.display = "none"
+			} else {
+				BistreE.style.display = "block"
+
+			}
+		})
+	});
+}
+
+jui();
+
+
+

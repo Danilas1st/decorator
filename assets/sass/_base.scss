@@ -11,6 +11,9 @@ html {
 body {
 	position: relative;
 	display: flex;
+	&.fixed {
+		overflow: hidden;
+	}
 
 	height: 100%;
 	font-size: $font_size_base;
