@@ -1,5 +1,5 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<script src="https://fonts.cdnfonts.com/css/foglihtenno06"></script><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -265,6 +265,44 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_submit" data-id="form">
+      <div class="popup_form_bg close_popups remove"></div>
+      <div class="popup_form_w">
+        <div class="popup_close close_popups remove"> 
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_form_right">
+          <div class="popup_form_head">
+            <h3>Оставьте заявку</h3>
+          </div>
+          <form class="popup_form">
+            <div class="placing_form_input popup-custom">
+              <input type="text" placeholder="Ф.И.О.">
+            </div>
+            <div class="placing_form_input popup-custom">
+              <input type="tel" placeholder="Телефон">
+            </div>
+            <div class="placing_form_input popup-custom">
+              <input type="mail" placeholder="E-mail">
+            </div>
+            <div class="placing_form_textarea popup-custom">
+              <textarea rows="1" cols="79" placeholder="Комментарий"> </textarea>
+            </div>
+            <div class="placing_form_info popup-custom">
+              <p>Поля под <span>*</span> обязательны для заполнения</p>
+            </div>
+            <div class="popup_form_btn"> 
+              <input type="submit" value="Отправить заявку">
+            </div>
+            <div class="popup_policy">Оставляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>

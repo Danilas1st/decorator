@@ -1,0 +1,51 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.cart
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						p Корзина
+			.cart_main 
+				.cart_main_head 
+					h1 корзина
+				.cart_list 
+					ul 
+						-for (i = 0; i < 5; i++)
+							li 
+								.cart_list_info 
+									.cart_list_info_img 
+										img(src="../i/popular/popular1.png", alt="")
+									.cart_list_info_name 
+										p Фартук женский с грудкой “Грация”  
+									.cart_list_info_price 
+										p 3500 ₽
+										span цена за шт.
+									.cart_list_info_qantity
+										.product_qantity.cart_qantity
+											button(type="button" onclick="changeQuantity(-1)")
+												+icon('minus')
+											input(type="number" min="1" value="1" class="product_quantity")
+											button(type="button" onclick="changeQuantity(1)")
+												+icon('plus')
+									.cart_list_info_final-price 
+										p 7000 ₽
+										span итого
+									.cart_list_info_delete 
+										button(type="button")
+											+icon('close')
+				.cart_bottom 
+					.cart_bottom_final-price 
+						p Сумма:
+						span 21 000 ₽
+					.cart_bottom_btn 
+						button(type="button") Оформить заказ
+
+
+
+						

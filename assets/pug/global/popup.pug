@@ -1,0 +1,24 @@
+.popup.popup_submit(data-id="form")
+	.popup_form_bg.close_popups.remove
+	.popup_form_w
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_form_right
+			.popup_form_head
+				h3 Оставьте заявку
+			form.popup_form
+				.placing_form_input.popup-custom
+					input(type="text" placeholder="Ф.И.О.")
+				.placing_form_input.popup-custom
+					input(type="tel" placeholder="Телефон")
+				.placing_form_input.popup-custom
+					input(type="mail" placeholder="E-mail")
+				.placing_form_textarea.popup-custom
+					textarea(rows="1" cols="79" placeholder="Комментарий") 
+				.placing_form_info.popup-custom
+					p Поля под <span>*</span> обязательны для заполнения
+				.popup_form_btn 
+					input(type="submit" value="Отправить заявку")
+				.popup_policy!='Оставляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>'
+				

@@ -73,10 +73,10 @@ block content_block
 								a(href="#") Добавить в корзину
 							.product_btn_right 
 								.product_qantity
-									button(type="button")
+									button(type="button" onclick="changeQuantity(-1)")
 										+icon('minus')
-									input(type="number" min="1" value="1")
-									button(type="button")
+									input(type="number" min="1" value="1" class="product_quantity")
+									button(type="button" onclick="changeQuantity(1)")
 										+icon('plus')
 			.product_informationthumb_img
 				.product_info_head 
@@ -92,7 +92,7 @@ block content_block
 								+icon('prev')
 						.popular_slider_btn_next 
 							button(type="button")
-								+icon('next')
+								+icon('prev')
 				.popular_slider_w
 					.popular_slider.swiperPop  
 						.swiper-wrapper

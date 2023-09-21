@@ -1,0 +1,194 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.placing 
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Корзина
+					li 
+						p Оформление заказа
+			.placing_main 
+				.placing_main_head 
+					h1 оформление заказа				
+				form.placing_main_form 
+					.palcing_main_buyer_w
+						.palcing_main_buyer_head 
+							p Покупатель
+						.palcing_main_buyer
+							.placing-form
+								.placing_form_input
+									input(type="text" placeholder="Ф.И.О.")
+								.placing_form_input
+									input(type="tel" placeholder="Телефон")
+								.placing_form_input
+									input(type="mail" placeholder="E-mail")
+								.placing_form_textarea
+									textarea(rows="1" cols="79" name="text" placeholder="Комментарий") 
+				.placing_main_information 
+					.placing_main_information_head
+						p Детали заказа
+					.placing_main_information_list 
+						ul
+							li 
+								.placing_main_information_list-left 
+									p Фартук женский с грудкой “Грация”
+								.placing_main_information_list-right 
+									p 7000 ₽
+									span x
+									span 2
+							li 
+								.placing_main_information_list-left 
+									p Фартук женский с грудкой “Грация”
+								.placing_main_information_list-right 
+									p 7000 ₽
+									span x
+									span 2
+							li 
+								.placing_main_information_list-left 
+									p Фартук женский с грудкой “Грация”
+								.placing_main_information_list-right 
+									p 7000 ₽
+									span x
+									span 2
+					.placing_main_information_list-change 
+						a(href="#") Изменить заказ
+					.placing_main_information_list-price 
+						.placing_main_information_list-price_left 
+							span Стоимость:
+						.placing_main_information_list-price_right 
+							p 21 000 ₽
+					.placing_main_information_list_btn.btn
+						button(type="submit") Оформить заказ
+				.palcing_main_method_w
+					.palcing_main_method_head 
+						p Способ доставки
+					.palcing_main_method
+						ul 
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/icons/car.svg", alt="")
+										.method_info 
+											p По тарифам
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="taxi")
+										label(for="taxi") 
+											.method_name 
+												p По Краснодару курьером такси
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/icons/truck.svg", alt="")
+										.method_info 
+											p от 300 руб.
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="truck")
+										label(for="truck") 
+											.method_name 
+												p По Краснодару наш транспорт
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/icons/box.svg", alt="")
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="box")
+										label(for="box") 
+											.method_name 
+												p Самовывоз в Краснодаре
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/linelogo.png", alt="")
+										.method_info 
+											p По тарифам
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="line")
+										label(for="line") 
+											.method_name 
+												p В др. регионы Деловые линии
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/sdek.png", alt="")
+										.method_info 
+											p По тарифам
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="sdek")
+										label(for="sdek") 
+											.method_name 
+												p В другие регионы СДЭК
+							li
+								.method_first.method 
+									.method_top 
+										.method_img 
+											img(src="../i/pek.png", alt="")
+										.method_info 
+											p По тарифам
+									.method_bottom 
+										input(type="radio" name="deliveryCheck" id="pek")
+										label(for="pek") 
+											.method_name 
+												p В другие регионы ПЭК
+					.palcing_main_addres 
+						form.placing-addres
+								.addres_form_input
+									input(type="text" placeholder="Населенный пункт")
+								.addres_form_input
+									input(type="text" placeholder="Адрес доставки")
+				.palcing_main_pay-method_w
+					.palcing_main_pay-method_head 
+						p Способ оплаты
+					.palcing_main_pay-method
+						ul 
+							li
+								.pay-method_first.method 
+									.pay-method_top 
+										input(type="radio" name="methodCheck" id="current")
+										label(for="current") 
+											.pay-method_name 
+												p На расчётный счёт
+									.pay-method_bottom 
+										p По реквизитам выставленного счёта (с НДС или без).
+							li
+								.pay-method_first.method 
+									.pay-method_top 
+										input(type="radio" name="methodCheck" id="cash-register")
+										label(for="cash-register") 
+											.pay-method_name 
+												p На кассе шоу-рума
+									.pay-method_bottom 
+										p Наличными в кассе шоу-рума.
+							li
+								.pay-method_first.method 
+									.pay-method_top 
+										input(type="radio" name="methodCheck" id="cash")
+										label(for="cash") 
+											.pay-method_name 
+												p На карту
+									.pay-method_bottom 
+										p Перечислением на карты Сбербанк, Тинькофф, Альфа-Банк.
+							li
+								.pay-method_first.method 
+									.pay-method_top 
+										input(type="radio" name="methodCheck" id="online")
+										label(for="online") 
+											.pay-method_name 
+												p Онлайн
+									.pay-method_bottom 
+										p На сайте после оформления заказа.
+				.placing_main_bottom 
+					p Поля под <span>*</span> обязательны для заполнения
+					.placing_main_bottom_policy!='Оставляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>'
+
+

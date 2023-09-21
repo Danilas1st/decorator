@@ -27,6 +27,8 @@ $(document).ready(function ($) {
 		pageWidget(['download']);
 		pageWidget(['product']);
 		pageWidget(['product-form']);
+		pageWidget(['placing-an-order']);
+		pageWidget(['cart']);
 		getAllClasses('html', '.elements_list');
 	}
 });
@@ -37,6 +39,7 @@ $(window).on('load', function () {
 	showMoreText();
 	productSlide();
 	changeQuantity();
+	modal();
 });
 
 $(window).on('resize', function () {
@@ -384,14 +387,80 @@ function changeQuantity(change) {
 	var quantityInput = document.querySelector('.product_quantity');
 	var currentQuantity = parseInt(quantityInput.value);
 
-	// Убедитесь, что текущее значение - число
+
 	if (!isNaN(currentQuantity)) {
-		// Если значение валидное, измените его в соответствии с изменением
+		
 		var newQuantity = currentQuantity + change;
 
-		// Убедитесь, что количество не станет отрицательным
+		
 		if (newQuantity >= 1) {
 			quantityInput.value = newQuantity;
 		}
 	}
+}
+
+
+function jui() {
+	const mnogoHui = document.querySelectorAll('input[name="deliveryCheck"]')
+	const BistreE = document.querySelector('.palcing_main_addres')
+
+
+	mnogoHui.forEach(item => {		
+		item.addEventListener('change', () => {
+			const huiJUI = item.getAttribute('id')
+
+			if(huiJUI === 'box') {
+				console.log(huiJUI, 'PIDARMOT')
+				BistreE.style.display = "none"
+			} else {
+				BistreE.style.display = "block"
+
+			}
+		})
+	});
+}
+
+jui();
+
+
+
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
+
+
+
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
 }
