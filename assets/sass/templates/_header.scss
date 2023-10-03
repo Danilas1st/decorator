@@ -26,7 +26,7 @@
 }
 .info_mobil {
 	a {
-		font-family: $font_3;
+		font-family: $font_6;
 		font-size: 1.6rem;
 		font-weight: 250;
 	}
@@ -40,14 +40,14 @@
 }
 .header_mail {
 	a {
-		font-family: $font_3;
+		font-family: $font_6;
 		font-size: 1.6rem;
 		font-weight: 250;
 	}
 }
 .header_addres {
 	p {
-		font-family: $font_3;
+		font-family: $font_6;
 		font-size: 1.6rem;
 		font-weight: 250;
 	}
@@ -86,7 +86,7 @@
 }
 .header_cart_info {
 	p {
-		font-family: $font_3;
+		font-family: $font_6;
 		font-size: 1.6rem;
 		font-weight: 250;
 	}
@@ -111,6 +111,25 @@
 		}
 	}
 	li {
+
+		&:nth-child(1) {
+			position: relative;
+			padding-right: 3rem;
+			.icon {
+				position: absolute;
+				top: 55%;
+				right: 0;
+				transform: translateY(-50%);
+				width: 1.2rem;
+				fill: none;
+				stroke: $dark;
+				stroke-width: .2rem;
+			}
+		}
+
+		a {
+			font-family: $font_3;
+		}
 		&:nth-child(1) {
 			display: flex;
 			align-items: center;
@@ -125,4 +144,34 @@
 	}
 }
 .link-hover {
+}
+.burger_trigger {
+	width: 3rem;
+	height: 2rem;
+	position: relative;
+	display: none;
+	@include bp(1024px) {
+		display: block;
+	}
+	span {
+		display: flex;
+		width: 100%;
+		height: .3rem;
+		background-color: rgb(51, 184, 176);
+		position: absolute;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+		border-radius: 1rem;
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+		&:nth-child(3) {
+			top: auto;
+			bottom: 0;
+			width: 100%;
+		}
+	}
 }
