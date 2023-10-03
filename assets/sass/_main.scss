@@ -53,3 +53,8 @@ h2, h3, h4, h5, h6 {
 }
 
 
+
+.swiper-button-disabled {
+	opacity: .7;
+	pointer-events: none;
+}

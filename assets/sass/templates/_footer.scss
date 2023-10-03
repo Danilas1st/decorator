@@ -3,6 +3,10 @@
 	color: $white;
 	a {
 		color: $white;
+		transition: all .3s ease;
+		&:hover {
+			color: #00A69C;
+		}
 	}
 }
 .section_in {

@@ -1,0 +1,53 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.thanks 
+		.section_in 
+			.category_breadcrumbs
+				ul 
+					li 
+						a(href="#") Главная
+					li 
+						a(href="#") Корзина
+					li 
+						a(href="#") Оформление заказа
+					li 
+						p Заказ принят
+			.thanks_main
+				.thanks_head 
+					h1 заказ принят
+					p Благодарим Вас за заказ!
+				ul.thanks_info__list
+					li 
+						span Номер заказа:
+						p 45565
+					li 
+						span Дата:
+						p 10.10.2023
+					li 
+						span E-mail:
+						p mail@mail.ru
+					li 
+						span Способ доставки:
+						p В другие регионы СДЭК
+					li 
+						span Способ оплаты
+						p На расчетный счет
+				.order-info 
+					h2 Информация о заказе
+					ul.order-list--head
+						li Товар
+						li Кол-во
+						li Стоимость
+					ul.order-list__main
+						-for(i = 0; i < 4; i++)
+							li 
+								ul 
+									li Фартук женский с грудкой “Грация”
+									li x2
+									li 7000 ₽
+					.order_all 
+						p Итого:
+						span 21 000 ₽

@@ -1,0 +1,99 @@
+.thanks_head {
+	margin-bottom: 5rem;
+	h1 {
+		color: $dark;
+		margin-bottom: 2rem;
+		font-size: 4.4rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1.8rem;
+	}
+}
+
+.thanks_info__list {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -2rem -15.8rem 12rem 0;
+	li {
+		padding: 2rem 15.8rem 0 0;
+	}
+	span {
+		color: rgba(47, 47, 47, 0.3);
+		font-size: 1.6rem;
+		font-family: $font_3;
+		display: block;
+		margin-bottom: 2rem;
+	}
+}
+
+.order-list--head, .order-list__main li ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-gap: 3%;
+	margin-bottom: 3rem;
+	color: rgba(47, 47, 47, 0.3);
+	font-size: 1.6rem;
+	font-family: $font_3;
+}
+.order-list--head {
+	li {
+		&:nth-child(2n + 2) {
+			text-align: center;
+		}
+		&:nth-child(3n + 3) {
+			@include flex-end;
+		}
+	}
+}
+
+
+.order-list__main ul li {
+	color: rgba(47, 47, 47, 1);
+	font-family: $font_6;
+	grid-gap: 3rem;
+	&:nth-child(2n + 2) {
+		text-align: center;
+	}
+	&:nth-child(3n + 3) {
+		@include flex-end;
+		font-family: $font_4;
+		font-weight: 500;
+		font-size: 1.8rem;
+	}
+}
+
+.order_all {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	grid-gap: 4rem;
+	border-top: .1rem solid rgba(47, 47, 47, 0.2);
+	border-bottom: .1rem solid rgba(47, 47, 47, 0.2);
+	padding: 1.5rem 0;
+
+	p {
+		font-size: 2rem;
+	}
+
+	span {
+		font-family: $font_4;
+		font-size: 1.8rem;
+		@include flex-end;
+	}
+}
+
+
+.order-info {
+	max-width: 88.6rem;
+
+	h2 {
+		margin-bottom: 4rem;
+		text-transform: uppercase;
+	}
+}
+
+.thanks {
+	padding-bottom: 20rem;
+	background: url('../../i/bg-thanks.jpg') center/cover no-repeat;
+}

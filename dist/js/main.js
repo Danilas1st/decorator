@@ -29,6 +29,7 @@ $(document).ready(function ($) {
 		pageWidget(['product-form']);
 		pageWidget(['placing-an-order']);
 		pageWidget(['cart']);
+		pageWidget(['thanks']);
 		getAllClasses('html', '.elements_list');
 	}
 });
@@ -456,7 +457,6 @@ function jui() {
 			const huiJUI = item.getAttribute('id')
 
 			if(huiJUI === 'box') {
-				console.log(huiJUI, 'PIDARMOT')
 				BistreE.style.display = "none"
 			} else {
 				BistreE.style.display = "block"
@@ -467,6 +467,36 @@ function jui() {
 }
 
 jui();
+
+document.addEventListener('DOMContentLoaded', () => {
+	const openMegaMenu = document.querySelector('.openMegaMenu');
+	const megaMenu = document.querySelector('.popup_menu');
+	document.addEventListener('click', (e) => {
+			if (e.target.classList.contains('popup_form_m')) {
+					openMegaMenu.classList.remove('active');
+					megaMenu.classList.remove('active');
+			}
+	});
+	document.addEventListener('scroll', () => {
+			if (openMegaMenu.classList.contains('active')) {
+					openMegaMenu.classList.remove('active');
+					megaMenu.classList.remove('active');
+			}
+	});
+
+	openMegaMenu.addEventListener('click', (e) => {
+			if (e.currentTarget.classList.contains('openMegaMenu')) {
+					if (openMegaMenu.classList.contains('active')) {
+							openMegaMenu.classList.remove('active');
+							megaMenu.classList.remove('active');
+					} else {
+							openMegaMenu.classList.add('active');
+							megaMenu.classList.add('active');
+					}
+			}
+	});
+});
+
 
 
 
