@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	height: $header;
+	// height: $header;
 	a {
 		transition: all .3s ease;
 		&:hover {
@@ -28,6 +28,7 @@
 	padding: 1rem 0 1.5rem 0;
 }
 .header_logo {
+	max-width: 12rem;
 }
 .header_info {
 }
@@ -46,6 +47,10 @@
 	}
 }
 .header_mail {
+
+	@include bp(1420px) {
+		display: none;
+	}
 	a {
 		font-family: $font_6;
 		font-size: 1.6rem;
@@ -53,6 +58,9 @@
 	}
 }
 .header_addres {
+	@include bp($point_2) {
+		display: none;
+	}
 	p {
 		font-family: $font_6;
 		font-size: 1.6rem;
@@ -60,6 +68,9 @@
 	}
 }
 .headder_search {
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .search {
 	display: flex;
@@ -130,6 +141,11 @@
 .header_nav {
 
 	li {
+		&:not(:first-child) {
+			@include bp($point_2) {
+				display: none;
+			}
+		}
 		a {
 			transition: all .3s ease;
 			&:hover {
@@ -191,7 +207,7 @@
 	height: 2rem;
 	position: relative;
 	display: none;
-	@include bp(1024px) {
+	@include bp($point_4) {
 		display: block;
 	}
 	span {
